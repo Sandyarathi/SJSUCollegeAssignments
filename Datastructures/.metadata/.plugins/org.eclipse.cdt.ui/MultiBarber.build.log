@@ -1,0 +1,49 @@
+23:52:22 **** Incremental Build of configuration Debug for project MultiBarber ****
+make all 
+Building file: ../src/ta.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ta.d" -MT"src/ta.d" -o "src/ta.o" "../src/ta.c"
+../src/ta.c:37:3: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+                sem_init(&wait_queue_sem, 0, 1);
+                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/ta.c:38:3: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+                sem_init(&student_sem, 0, 0);
+                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/ta.c:39:3: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+                sem_init(&ta_sem, 0, 3);
+                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/ta.c:45:52: warning: incompatible pointer types passing 'void *(int *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+                        thread_status = pthread_create(&ta_id[i], NULL, ta_function, (void*)&i);
+                                                                        ^~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/pthread.h:314:11: note: passing argument to parameter here
+                void *(*)(void *), void * __restrict);
+                        ^
+../src/ta.c:53:57: warning: incompatible pointer types passing 'void *(int *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+                        thread_status = pthread_create(&student_id[j], NULL, student_function, (void*)&j);
+Finished building: ../src/ta.c
+                                                                             ^~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/pthread.h:314:11: note: passing argument to parameter here
+                void *(*)(void *), void * __restrict);
+                        ^
+../src/ta.c:32:14: warning: unused variable 'l' [-Wunused-variable]
+        int i, j, k,l;
+                    ^
+ 
+6 warnings generated.
+Building target: MultiBarber
+Invoking: MacOS X C Linker
+gcc  -o "MultiBarber"  ./src/ta.o   
+Finished building target: MultiBarber
+ 
+
+23:52:23 Build Finished (took 175ms)
+

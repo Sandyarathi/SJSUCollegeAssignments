@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;StackPrac/src/stackType.h&apos; to &apos;myStack.h&apos;" description="Rename resource &apos;stackType.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/stackType.h" name="myStack.h" stamp="1415233546009" updateReferences="true"/>
+</session>

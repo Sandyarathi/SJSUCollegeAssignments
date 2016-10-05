@@ -1,0 +1,40 @@
+16:33:59 **** Incremental Build of configuration Debug for project ProgExam2 ****
+make all 
+Building file: ../src/testQueueByStack.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testQueueByStack.d" -MT"src/testQueueByStack.d" -o "src/testQueueByStack.o" "../src/testQueueByStack.cpp"
+In file included from ../src/testQueueByStack.cpp:10:
+../src/queueByStack.h:179:14: warning: delete called on 'linkedStackType<int>' that has virtual functions but non-virtual destructor [-Wdelete-non-virtual-dtor]
+        if (stack1) delete stack1;
+                    ^
+../src/testQueueByStack.cpp:15:20: note: in instantiation of member function 'queueByStack<int>::~queueByStack' requested here
+        queueByStack<int> q;
+                          ^
+In file included from ../src/testQueueByStack.cpp:10:
+../src/queueByStack.h:180:14: warning: delete called on 'linkedStackType<int>' that has virtual functions but non-virtual destructor [-Wdelete-non-virtual-dtor]
+        if (stack2) delete stack2;
+                    ^
+../src/queueByStack.h:118:1: warning: control may reach end of non-void function [-Wreturn-type]
+} //end front
+^
+../src/testQueueByStack.cpp:22:26: note: in instantiation of member function 'queueByStack<int>::front' requested here
+        cout << "front = " << q.front() << endl;
+                                ^
+In file included from ../src/testQueueByStack.cpp:10:
+../src/queueByStack.h:135:1: warning: control may reach end of non-void function [-Wreturn-type]
+} //end back
+^
+../src/testQueueByStack.cpp:23:25: note: in instantiation of member function 'queueByStack<int>::back' requested here
+        cout << "back = " << q.back() << endl;
+                               ^
+4 warnings generated.
+Finished building: ../src/testQueueByStack.cpp
+ 
+Building target: ProgExam2
+Invoking: MacOS X C++ Linker
+g++  -o "ProgExam2"  ./src/testQueueByStack.o   
+Finished building target: ProgExam2
+ 
+
+16:33:59 Build Finished (took 583ms)
+

@@ -1,0 +1,28 @@
+16:34:01 **** Incremental Build of configuration Debug for project ThreadPractise ****
+make all 
+Building file: ../MultiThread1.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultiThread1.d" -MT"MultiThread1.d" -o "MultiThread1.o" "../MultiThread1.cpp"
+../MultiThread1.cpp:38:15: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pthread_exit((void *)total); // Notice the cast
+                     ^
+../MultiThread1.cpp:55:15: error: cannot cast from type 'double' to pointer type 'void *'
+        pthread_exit((void *)average); // Notice the cast
+                     ^~~~~~~~~~~~~~~
+../MultiThread1.cpp:68:5: error: no matching function for call to 'pthread_create'
+    pthread_create(&sumThread,NULL,Sum,(void *)userArray);
+    ^~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/pthread.h:313:5: note: candidate function not viable: no known conversion from 'void *(int *)' to 'void *(*)(void *)' for 3rd argument
+int pthread_create(pthread_t * __restrict, const pthread_attr_t * __restrict,
+    ^
+../MultiThread1.cpp:72:5: error: no matching function for call to 'pthread_create'
+    pthread_create(&avgThread,NULL,Avg,(void *)userArray);
+    ^~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/pthread.h:313:5: note: candidate function not viable: no known conversion from 'void *(int *)' to 'void *(*)(void *)' for 3rd argument
+int pthread_create(pthread_t * __restrict, const pthread_attr_t * __restrict,
+    ^
+1 warning and 3 errors generated.
+make: *** [MultiThread1.o] Error 1
+
+16:34:02 Build Finished (took 423ms)
+

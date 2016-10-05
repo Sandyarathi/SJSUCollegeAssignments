@@ -1,0 +1,40 @@
+11:23:24 **** Incremental Build of configuration Debug for project Trial ****
+make all 
+Building file: ../Trial.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Trial.d" -MT"Trial.d" -o "Trial.o" "../Trial.cpp"
+../Trial.cpp:45:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&waitingRoom,0,1);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../Trial.cpp:46:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&studentAvailable,0,0);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../Trial.cpp:47:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&taReady,0,1);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../Trial.cpp:86:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+../Trial.cpp:110:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+5 warnings generated.
+Finished building: ../Trial.cpp
+ 
+Building target: Trial
+Invoking: MacOS X C++ Linker
+g++  -o "Trial"  ./Trial.o   
+Finished building target: Trial
+ 
+
+11:23:24 Build Finished (took 520ms)
+

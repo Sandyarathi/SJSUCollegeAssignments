@@ -1,0 +1,31 @@
+16:34:00 **** Incremental Build of configuration Debug for project Recursion1 ****
+make all 
+Building file: ../srcRecursion/listLarge.cpp
+Invoking: GCC C++ Compiler
+g++ -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"srcRecursion/listLarge.d" -MT"srcRecursion/listLarge.d" -o "srcRecursion/listLarge.o" "../srcRecursion/listLarge.cpp"
+Finished building: ../srcRecursion/listLarge.cpp
+ 
+Building target: Recursion1
+Invoking: MacOS X C++ Linker
+g++  -o "Recursion1"  ./srcRecursion/listLarge.o   
+Undefined symbols for architecture x86_64:
+  "std::ostream::operator<<(std::ostream& (*)(std::ostream&))", referenced from:
+      _main in listLarge.o
+  "std::ostream::operator<<(int)", referenced from:
+      _main in listLarge.o
+  "std::ios_base::Init::Init()", referenced from:
+      ___cxx_global_var_init in listLarge.o
+  "std::ios_base::Init::~Init()", referenced from:
+      ___cxx_global_var_init in listLarge.o
+  "std::cout", referenced from:
+      _main in listLarge.o
+  "std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)", referenced from:
+      _main in listLarge.o
+  "std::basic_ostream<char, std::char_traits<char> >& std::operator<<<std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)", referenced from:
+      _main in listLarge.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Recursion1] Error 1
+
+16:34:00 Build Finished (took 326ms)
+

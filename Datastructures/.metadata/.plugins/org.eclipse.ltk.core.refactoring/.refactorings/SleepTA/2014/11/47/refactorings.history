@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SleepTA/src/currentStudentWithTA.h&apos; to &apos;Manager.h&apos;" description="Rename resource &apos;currentStudentWithTA.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/currentStudentWithTA.h" name="Manager.h" stamp="1416173487878" updateReferences="true"/>
+</session>

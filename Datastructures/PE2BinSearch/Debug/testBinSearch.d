@@ -1,0 +1,1 @@
+testBinSearch.d: ../testBinSearch.cpp

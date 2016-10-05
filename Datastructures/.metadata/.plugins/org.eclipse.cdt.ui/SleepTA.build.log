@@ -1,0 +1,6 @@
+20:09:48 **** Incremental Build of configuration Debug for project SleepTA ****
+make all 
+make: Nothing to be done for `all'.
+
+20:09:48 Build Finished (took 61ms)
+

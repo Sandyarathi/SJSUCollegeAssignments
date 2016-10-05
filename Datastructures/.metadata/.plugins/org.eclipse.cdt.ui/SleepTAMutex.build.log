@@ -1,0 +1,34 @@
+18:06:58 **** Incremental Build of configuration Debug for project SleepTAMutex ****
+make all 
+Building file: ../src/sleepTA.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sleepTA.d" -MT"src/sleepTA.d" -o "src/sleepTA.o" "../src/sleepTA.cpp"
+../src/sleepTA.cpp:67:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&waitingRoom,0,1);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/sleepTA.cpp:69:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&studentAvailable,0,0);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/sleepTA.cpp:71:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&taReady,0,1);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+3 warnings generated.
+Finished building: ../src/sleepTA.cpp
+ 
+Building target: SleepTAMutex
+Invoking: MacOS X C++ Linker
+g++  -o "SleepTAMutex"  ./src/sleepTA.o   
+Finished building target: SleepTAMutex
+ 
+
+18:06:58 Build Finished (took 487ms)
+

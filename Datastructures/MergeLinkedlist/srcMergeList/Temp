@@ -1,0 +1,272 @@
+template <class Type>
+void orderedLinkedList<Type>::merge(orderedLinkedList<Type> &list1, orderedLinkedList<Type> &list2)
+{
+
+	if((list1.length()==0) &&(list2.length()==0)){
+		cout<<"both lists are empty!"<<endl;
+	}
+	else if(list1.length()==0){
+		*this=list2;
+	}
+	else if(list2.length()==0){
+		*this=list1;
+	}
+	else{
+
+		nodeType<Type> *list1Current;
+		nodeType<Type> *list2Current;
+		bool loop = true;
+		while(loop){
+
+
+			if(!list1.isEmptyList() && !list2.isEmptyList()){
+				list1Current=list1.first;
+				list2Current = list2.first;
+				if(list1Current->info<list2Current->info){
+					this->insertLast(list1Current->info);
+					list1.deleteNode(list1Current->info);
+				}
+				else{
+					this->insertLast(list2Current->info);
+					list2.deleteNode(list2Current->info);
+
+				}
+
+			}
+			else if(list2.isEmptyList() && !list1.isEmptyList()){
+				cout<<"entering in list2 is empty"<<endl;
+				list1Current=list1.first;
+				while(list1Current!=NULL){
+
+					this->insertLast(list1Current->info);
+					list1.deleteNode(list1Current->info);
+
+					list1Current = list1.first;
+				}
+
+
+			}
+			else if(list1.isEmptyList() && !list2.isEmptyList()){
+				cout<<"entering here!"<<endl;
+				list2Current=list2.first;
+				while(list2Current!=NULL){
+					this->insertLast(list2Current->info);
+					list2.deleteNode(list2Current->info);
+					list2Current = list2.first;
+				}
+
+
+			}
+
+			else{
+				loop = false;
+			}
+
+
+		}
+	}
+
+	list1.destroyList();
+	list2.destroyList();
+} //end merge
+
+template<class Type>
+inline void unorderedLinkedList<Type>::deleteSmall() {
+	nodeType<Type> *current;//pointer to traverse the list
+		nodeType<Type> *trailCurrent;//pointer that trails the current pointer
+
+		nodeType<Type> *small;//pointer at the this->first occurence of smallest info
+		nodeType<Type> *trailSmall;//pointer trails the small pointer
+
+		if(this->first==NULL){
+			cerr<<"Cannot delete from an empty list";
+		}
+		else{
+			small=this->first;
+			trailCurrent=this->first;
+			current=this->first->link;
+			while(current->link!=NULL){
+				if(small->info>current->info){
+					trailSmall=trailCurrent;
+					small=current;
+				}
+				trailCurrent=current;
+				current=current->link;
+			}
+			if(small==this->first){
+				this->first=this->first->link;
+
+			}
+			else{
+				trailSmall->link=small->link;
+				if(small==this->last){
+					this->last=trailSmall;
+				}
+			}
+			delete small;
+
+		}
+
+
+
+}
+
+template<class Type>
+inline void unorderedLinkedList<Type>::deleteAll(const Type& deleteItem) {
+
+	nodeType<Type> *current;
+	nodeType<Type> *trailCurrent;
+	if(this->first==NULL){
+		cerr<<"Cannot delete an empty list";
+	}
+	else{
+		current = this->first;
+
+		while (current != NULL)
+		{
+			if (current->info == deleteItem)
+			{
+				if (current == this->first)
+				{
+					this->first = this->first->link;
+					delete current;
+					current = this->first;
+					if(this->first == NULL)
+						this->last = NULL;
+				}
+				else
+				{
+					trailCurrent->link = current->link;
+
+					if(current == this->last)
+						this->last = trailCurrent;
+
+					delete current;
+
+					current = trailCurrent-> link;
+				}
+			}
+			else
+			{
+				trailCurrent = current;
+				current = current->link;
+			}
+		} // end while
+	}
+
+
+}
+
+template<class Type>
+inline void linkedListType<Type>::divideAt(linkedListType<Type>& secondList,
+		const Type& item) {
+
+
+	nodeType<Type> *current;
+	nodeType<Type> *trailCurrent;
+
+	bool found;
+
+	if (first == NULL)
+	{
+		cout << "The list to be splitted is empty." << endl;
+		secondList.first = NULL;
+		secondList.last = NULL;
+        secondList.count = 0;
+	}
+	else
+	{
+		current = first;
+		found = false;
+        int i = 1;
+
+		while (current != NULL && !found)
+			if (current->info == item)
+				found = true;
+			else
+			{
+				trailCurrent = current;
+				current = current->link;
+                i++;
+			}
+
+		if (found)
+		{
+			if (first == current)
+			{
+				secondList.first = first;
+				secondList.last = last;
+				first = NULL;
+				last = NULL;
+                secondList.count = count;
+                count = 0;
+			}
+			else
+			{
+				secondList.first = current;
+				secondList.last = last;
+				last = trailCurrent;
+				last->link = NULL;
+                secondList.count = count - i + 1;
+                count = i - 1;
+			}
+		}
+		else
+		{
+			cout << "List splitting number is not in the list." << endl;
+			secondList.first = NULL;
+			secondList.last = NULL;
+            secondList.count = 0;
+		}
+	}
+}
+template<class Type>
+inline void linkedListType<Type>::split2(linkedListType<Type>& sublist) {
+
+	nodeType<Type> *current;
+		nodeType<Type> *mid;
+
+		if (first == NULL)
+		{
+			sublist.first = NULL;
+			sublist.last = NULL;
+	        sublist.count = 0;
+		}
+		else
+			if (first->link == NULL)
+			{
+				sublist.first = NULL;
+				sublist.last = NULL;
+	            sublist.count = 0;
+			}
+			else
+			{
+				mid = first;
+				current = first->link;
+
+				if (current != NULL)
+					current = current->link;
+
+	            int i = 1;
+
+				while (current != NULL)
+				{
+					mid = mid->link;
+					current = current->link;
+	                i++;
+
+					if (current != NULL)
+						current = current->link;
+				}
+
+				sublist.first = mid->link;
+				sublist.last = last;
+				last = mid;
+				last->link = NULL;
+
+	            sublist.count = count - i;
+	            count = i;
+			}
+
+
+}

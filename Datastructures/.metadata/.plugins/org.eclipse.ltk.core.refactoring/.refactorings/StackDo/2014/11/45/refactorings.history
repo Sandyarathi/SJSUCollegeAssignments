@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;StackDo/src/stackType.h&apos; to &apos;stackType.cpp&apos;" description="Rename resource &apos;stackType.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/stackType.h" name="stackType.cpp" stamp="1415232064154" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;StackDo/src/stackType.cpp&apos; to &apos;stackType.h&apos;" description="Rename resource &apos;stackType.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/stackType.cpp" name="stackType.h" stamp="1415232097122" updateReferences="true"/>
+</session>

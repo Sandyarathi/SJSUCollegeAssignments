@@ -1,0 +1,6 @@
+16:34:00 **** Incremental Build of configuration Debug for project SeqSearch ****
+make all 
+make: Nothing to be done for `all'.
+
+16:34:00 Build Finished (took 112ms)
+

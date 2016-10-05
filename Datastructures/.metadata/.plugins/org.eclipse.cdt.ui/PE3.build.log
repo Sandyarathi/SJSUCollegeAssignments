@@ -1,0 +1,15 @@
+10:28:09 **** Incremental Build of configuration Debug for project PE3 ****
+make all 
+Building file: ../src/testKthLargestItem.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testKthLargestItem.d" -MT"src/testKthLargestItem.d" -o "src/testKthLargestItem.o" "../src/testKthLargestItem.cpp"
+Finished building: ../src/testKthLargestItem.cpp
+ 
+Building target: PE3
+Invoking: MacOS X C++ Linker
+g++  -o "PE3"  ./src/testKthLargestItem.o   
+Finished building target: PE3
+ 
+
+10:28:09 Build Finished (took 491ms)
+

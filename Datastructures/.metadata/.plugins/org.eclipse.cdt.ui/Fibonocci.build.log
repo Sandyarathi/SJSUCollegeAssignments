@@ -1,0 +1,16 @@
+16:33:55 **** Incremental Build of configuration Debug for project Fibonocci ****
+make all 
+Building file: ../CString1.cpp
+Invoking: GCC C++ Compiler
+g++ -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CString1.d" -MT"CString1.d" -o "CString1.o" "../CString1.cpp"
+../CString1.cpp:50:14: error: no member named 'e' in 'std::basic_string<char>'
+     if(str1.e)
+        ~~~~ ^
+../CString1.cpp:53:1: error: expected statement
+}
+^
+2 errors generated.
+make: *** [CString1.o] Error 1
+
+16:33:56 Build Finished (took 432ms)
+

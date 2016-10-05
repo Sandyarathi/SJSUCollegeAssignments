@@ -1,0 +1,33 @@
+19:52:04 **** Incremental Build of configuration Debug for project Vineesha ****
+make all 
+Building file: ../src/matrixType.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/matrixType.d" -MT"src/matrixType.d" -o "src/matrixType.o" "../src/matrixType.cpp"
+Finished building: ../src/matrixType.cpp
+ 
+Building file: ../src/testMatrixType.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testMatrixType.d" -MT"src/testMatrixType.d" -o "src/testMatrixType.o" "../src/testMatrixType.cpp"
+../src/testMatrixType.cpp:41:10: error: no viable overloaded '='
+                sumMat = mat1 + mat2;
+                ~~~~~~ ^ ~~~~~~~~~~~
+../src/matrixType.h:23:13: note: candidate function not viable: expects an l-value for 1st argument
+        matrixType operator =(matrixType &);
+                   ^
+../src/testMatrixType.cpp:47:11: error: no viable overloaded '='
+                diffMat = mat1 - mat2;
+                ~~~~~~~ ^ ~~~~~~~~~~~
+../src/matrixType.h:23:13: note: candidate function not viable: expects an l-value for 1st argument
+        matrixType operator =(matrixType &);
+                   ^
+../src/testMatrixType.cpp:53:11: error: no viable overloaded '='
+                prodMat = mat1 * mat2;
+                ~~~~~~~ ^ ~~~~~~~~~~~
+../src/matrixType.h:23:13: note: candidate function not viable: expects an l-value for 1st argument
+        matrixType operator =(matrixType &);
+                   ^
+3 errors generated.
+make: *** [src/testMatrixType.o] Error 1
+
+19:52:05 Build Finished (took 1s.441ms)
+

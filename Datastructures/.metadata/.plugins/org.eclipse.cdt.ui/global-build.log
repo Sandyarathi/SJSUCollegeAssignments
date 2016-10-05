@@ -1,0 +1,46 @@
+15:18:33 **** Build of configuration Debug for project Shruthi_Multi ****
+make all 
+Building file: ../src/sleepTA.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sleepTA.d" -MT"src/sleepTA.d" -o "src/sleepTA.o" "../src/sleepTA.c"
+../src/sleepTA.c:41:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&wait_queue_sem, 0, 1);//Binary semaphore to control the access to the shared variable 'waiting_room_count'
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/sleepTA.c:42:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&student_sem, 0, 0);//semaphore to indicate if a student is available or not
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/sleepTA.c:43:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&ta_sem, 0, 3);//semaphore to indicate if a TA is free or helping student.
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/sleepTA.c:44:2: warning: 'sem_init' is deprecated [-Wdeprecated-declarations]
+        sem_init(&ta_sync, 0, 1);//semaphore to indicate if a TA is free or helping student.
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/semaphore.h:55:5: note: 'sem_init' has been explicitly marked deprecated here
+int sem_init(sem_t *, int, unsigned int) __deprecated;
+    ^
+../src/sleepTA.c:38:15: warning: unused variable 'l' [-Wunused-variable]
+        int i, j, k, l;
+                     ^
+5 warnings generated.
+Finished building: ../src/sleepTA.c
+ 
+Building target: Shruthi_Multi
+Invoking: MacOS X C Linker
+gcc  -o "Shruthi_Multi"  ./src/sleepTA.o   
+Finished building target: Shruthi_Multi
+ 
+15:19:01 **** Incremental Build of configuration Debug for project Shruthi_Multi ****
+make all 
+make: Nothing to be done for `all'.
+15:22:59 **** Incremental Build of configuration Debug for project Shruthi_Multi ****
+make all 
+make: Nothing to be done for `all'.

@@ -1,0 +1,33 @@
+16:33:56 **** Incremental Build of configuration Debug for project LinkedList ****
+make all 
+Building file: ../srcLinkedList/testUnorderedLinkedList.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"srcLinkedList/testUnorderedLinkedList.d" -MT"srcLinkedList/testUnorderedLinkedList.d" -o "srcLinkedList/testUnorderedLinkedList.o" "../srcLinkedList/testUnorderedLinkedList.cpp"
+In file included from ../srcLinkedList/testUnorderedLinkedList.cpp:8:
+../srcLinkedList/unorderedLinkedList.h:203:8: warning: variable 'small' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+                        if (this->first->link == NULL)
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../srcLinkedList/testUnorderedLinkedList.cpp:20:11: note: in instantiation of member function 'unorderedLinkedList<int>::deleteSmall' requested here
+    list1.deleteSmall();
+          ^
+../srcLinkedList/unorderedLinkedList.h:237:10: note: uninitialized use occurs here
+                delete small;
+                       ^~~~~
+../srcLinkedList/unorderedLinkedList.h:203:4: note: remove the 'if' if its condition is always false
+                        if (this->first->link == NULL)
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../srcLinkedList/unorderedLinkedList.h:196:24: note: initialize the variable 'small' to silence this warning
+                nodeType<Type> *small;//pointer at the this->first occurence of smallest info
+                                     ^
+                                      = NULL
+1 warning generated.
+Finished building: ../srcLinkedList/testUnorderedLinkedList.cpp
+ 
+Building target: LinkedList
+Invoking: MacOS X C++ Linker
+g++  -o "LinkedList"  ./srcLinkedList/testUnorderedLinkedList.o   
+Finished building target: LinkedList
+ 
+
+16:33:58 Build Finished (took 1s.265ms)
+

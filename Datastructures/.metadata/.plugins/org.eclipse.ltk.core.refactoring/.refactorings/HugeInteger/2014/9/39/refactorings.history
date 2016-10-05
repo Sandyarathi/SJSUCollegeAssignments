@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;HugeInteger/HugeInt.cpp&apos; to &apos;HugeInteger.cpp&apos;" description="Rename resource &apos;HugeInt.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="HugeInt.cpp" name="HugeInteger.cpp" stamp="1411537536321" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;HugeInteger/HugeInt.h&apos; to &apos;HugeInteger.h&apos;" description="Rename resource &apos;HugeInt.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="HugeInt.h" name="HugeInteger.h" stamp="1411537580708" updateReferences="true"/>
+</session>
